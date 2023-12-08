@@ -1,7 +1,13 @@
-let button = document.querySelector("button");
 
-button.addEventListener("click", addToList());
+document.getElementById('add').onclick = function() {
+    let node = document.createElement('li')
+    let item = document.getElementById('input').value;
+    let itemNode = document.createTextNode(item);
 
-function addToList(input) {
-    let list = [];
-    list.push(input)};
+    node.appendChild(itemNode);
+
+    document.getElementById('li').appendChild(node);
+    document.getElementById('input').value = "";
+
+    console.log(node)
+    }
